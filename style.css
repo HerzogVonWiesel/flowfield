@@ -15,3 +15,9 @@ canvas {
   mix-blend-mode: difference;
   position: absolute;
 }
+
+@media (prefers-color-scheme: dark){
+  #overcanvas {
+    visibility: visible;
+  }
+}
