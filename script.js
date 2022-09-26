@@ -81,11 +81,11 @@ function drawField() {
       ctx.moveTo(0, 0);
       ctx.lineTo(0, size * length + 10);
       ctx.translate(0, size * length + 10);
-      ctx.rotate(1.58);
+      ctx.rotate(2.37);
       ctx.moveTo(0, 0);
       ctx.lineTo(0, 10);
       ctx.moveTo(0, 0);
-      ctx.rotate(-3.16);
+      ctx.rotate(-4.74);
       ctx.lineTo(0, 10);
       ctx.stroke();
       ctx.restore();
