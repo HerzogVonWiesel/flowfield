@@ -1,0 +1,17 @@
+body, html {
+  margin: 0;
+}
+
+canvas {
+  display: block;
+}
+
+#overcanvas {
+  visibility: hidden;
+  z-index: 10;
+  width: 100vw;
+  height: 100vh;
+  background-color: #fff;
+  mix-blend-mode: difference;
+  position: absolute;
+}
