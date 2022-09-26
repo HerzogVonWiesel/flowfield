@@ -7,6 +7,14 @@ let columns;
 let rows;
 let noiseZ;
 
+let bg = "white";
+let stroke="black";
+
+if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    bg="black";
+    stroke="white";
+}
+
 function setup() {
   size = 20;
   noiseZ = 0;
@@ -55,7 +63,7 @@ function draw() {
 }
 
 function clear() {
-  ctx.fillStyle = "white";
+  ctx.fillStyle = bg;
   ctx.fillRect(0, 0, w, h);
 }
 
@@ -67,7 +75,7 @@ function drawField() {
       ctx.save();
       ctx.translate(x * size, y * size);
       ctx.rotate(angle);
-      ctx.strokeStyle = "black";
+      ctx.strokeStyle = stroke;
       ctx.lineWidth = 1.0;
       ctx.beginPath();
       ctx.moveTo(0, 0);
