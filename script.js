@@ -15,6 +15,17 @@ if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').match
     stroke="white";
 }
 
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e) { 
+    if (bg==="black"){
+        bg="white";
+        stroke="black";
+    }
+    else{
+        bg="black";
+        stroke="white";
+    }
+})
+
 function setup() {
   size = 20;
   noiseZ = 0;
