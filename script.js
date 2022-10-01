@@ -7,21 +7,23 @@ let columns;
 let rows;
 let noiseZ;
 
-let bg = "transparent";
+let bright_bg = "#fff7ed";
+let dark_bg = "black";
+let bg = bright_bg;
 let stroke="black";
 
 if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-    //bg="black";
+    bg=dark_bg;
     stroke="white";
 }
 
 window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e) { 
     if (stroke==="white"){
-        //bg="white";
+        bg=bright_bg;
         stroke="black";
     }
     else{
-        //bg="black";
+        bg=dark_bg;
         stroke="white";
     }
 })
