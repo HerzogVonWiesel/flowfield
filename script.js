@@ -70,7 +70,7 @@ function reset() {
 function draw() {
   requestAnimationFrame(draw);
   calculateField();
-  noiseZ += 0.002;
+  noiseZ += 0.003;
   clear();
   drawField();
 }
