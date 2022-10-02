@@ -29,7 +29,7 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', fun
 })
 
 function setup() {
-  size = 20;
+  size = 30;
   noiseZ = 0;
   canvas = document.querySelector("#canvas");
   ctx = canvas.getContext("2d");
@@ -93,13 +93,9 @@ function drawField() {
       ctx.beginPath();
       ctx.moveTo(0, 0);
       ctx.lineTo(0, size * length + 10);
-      ctx.translate(0, size * length + 10);
-      ctx.rotate(2.37);
-      ctx.moveTo(0, 0);
-      ctx.lineTo(0, 10);
-      ctx.moveTo(0, 0);
-      ctx.rotate(-4.74);
-      ctx.lineTo(0, 10);
+      ctx.lineTo(-9, (size * length + 10)-9);
+      ctx.moveTo(0, size * length + 10);
+      ctx.lineTo(9, (size * length + 10)-9);
       ctx.stroke();
       ctx.restore();
     }
@@ -108,3 +104,4 @@ function drawField() {
 
 setup();
 draw();
+
